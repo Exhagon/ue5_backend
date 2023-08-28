@@ -6,5 +6,4 @@ const app = express();
 app.set('views',path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use('/',router);
-console.log("XD");
 app.listen(3000,()=> console.log("Backend started"));
