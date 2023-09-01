@@ -9,4 +9,13 @@ const getData = (req:any,res:any)=>{
     });
 }
 
-export {getData}
+const postData = (req:any, res:any, id:number, dato:string)=>{
+    const sql = `insert into new_table (id,dato) values ${id} ${dato}`;
+    database.connection.query(sql,(err:any,rows:any)=>{
+        if(err) throw err;
+        rows.length > 0 ? res.json(rows) :
+        res.send('Not Result');
+    });
+}
+
+export {getData,postData}
