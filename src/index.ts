@@ -7,5 +7,5 @@ router.get('/',(req,res,next)=>{
 
 // router.get('/api/table', new_table.getData);
 router.get('/api/table', new_table.getDataD);
-router.get('/api/tableP', new_table.postData);
+router.post('/api/tableP', new_table.postData);
 export {router};
